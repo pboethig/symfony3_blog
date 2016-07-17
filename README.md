@@ -13,6 +13,7 @@ this is a symfony 3.1 trainingsproject to test the franework.
 - phpunit
 
 
+- configure you vhost to point to the application
 - start serer as known with:
 php bin/console server:run
 
@@ -20,10 +21,13 @@ php bin/console server:run
 - localhost:8000/user
 
 - posts:
-- localhost:8000/post
+  - localhost:8000/post
 
 - replies:
--localhost:8000&replies
+  - localhost:8000/replies
 
-- user restapi
-- localhost:8000/api/user
+- user restapi (postman)
+  - localhost:8000/api/user
+
+- run tests: 
+  - phpunit -c phpunit.xml from projectroot
