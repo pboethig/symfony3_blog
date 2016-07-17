@@ -1,0 +1,23 @@
+check_blog_replies:
+    resource: "@CheckBlogBundle/Controller/RepliesController.php"
+    type:     annotation
+
+check_blog_post:
+    resource: "@CheckBlogBundle/Controller/PostController.php"
+    type:     annotation
+
+check_blog_user:
+    resource: "@CheckBlogBundle/Controller/UserController.php"
+    type:     annotation
+
+check_blog:
+    resource: "@CheckBlogBundle/Resources/config/routing.xml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller"
+    type:     annotation
+
+app_api:
+    resource: "@CheckBlogBundle/Controller/Api"
+    type:     annotation

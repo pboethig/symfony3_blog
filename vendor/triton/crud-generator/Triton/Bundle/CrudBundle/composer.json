@@ -1,0 +1,34 @@
+{
+    "name": "triton/crud-generator",
+    "description": "Symfony3 bundle for CRUD generation with pagination, filtering bulk delete and bootstrap3 markup",
+    "keywords": ["crud", "generator", "symfony3", "pagination", "filter"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Petko Petkov",
+            "email": "petkopara@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/symfony": "~2.8|~3.0",
+        "sensio/generator-bundle": "~3.0",
+        "pagerfanta/pagerfanta": "1.0.*@dev",
+        "lexik/form-filter-bundle": "~5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.7"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "Triton\\Bundle\\CrudBundle": ""
+        }
+    },
+    "target-dir": "Triton/Bundle/CrudBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

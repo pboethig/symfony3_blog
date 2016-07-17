@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: 3306
+    database_name: blog
+    database_user: root
+    database_password: ibadmin
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: b357451786ce386c178b59df4e28f31e7f4567b9

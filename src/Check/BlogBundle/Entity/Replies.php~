@@ -1,0 +1,74 @@
+<?php
+
+namespace Check\BlogBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Replies
+ *
+ * @ORM\Table(name="replies", indexes={@ORM\Index(name="userid", columns={"userid"}), @ORM\Index(name="postid", columns={"postid"})})
+ * @ORM\Entity
+ */
+class Replies
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255, nullable=false)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="content", type="text", nullable=false)
+     */
+    private $content;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created", type="datetime", nullable=false)
+     */
+    private $created;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="updated", type="string", length=255, nullable=false)
+     */
+    private $updated;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Check\BlogBundle\Entity\User
+     *
+     * @ORM\ManyToOne(targetEntity="Check\BlogBundle\Entity\User")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="userid", referencedColumnName="id")
+     * })
+     */
+    private $userid;
+
+    /**
+     * @var \Check\BlogBundle\Entity\Post
+     *
+     * @ORM\ManyToOne(targetEntity="Check\BlogBundle\Entity\Post")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="postid", referencedColumnName="id")
+     * })
+     */
+    private $postid;
+
+
+}
+
