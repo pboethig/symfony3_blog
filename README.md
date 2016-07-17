@@ -19,7 +19,7 @@ this is a symfony 3.1 trainingsproject to test the franework.
   - php bin/console server:run
 
 - users:
-- localhost:8000/user
+  - localhost:8000/user
 
 - posts:
   - localhost:8000/post
